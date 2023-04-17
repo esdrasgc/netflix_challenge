@@ -1,1 +1,40 @@
-# netflix_challenge
+# netflix challenge
+## Sistema de recomendação de filmes baseado em similaridade de usuários
+
+
+### Introdução  
+O desafio netflix consistia na criação de um sistema de recomendação de filmes para os usários. A informação disponivel para realizar essa análise eram uma lista de filmes e uma lista de avaliações de usuários. A partir dessas informações, o sistema deveria recomendar filmes para os usuários que ainda não avaliaram.  
+Desse modo, o problema se resumia a "predizer" a nota que um dado usuário daria para um filme que ele ainda não assistiu (e por consequência, não avaliou).
+O vencedor do desafio utilizaou um algoritmo de decomposição SVD (Singular Value Decomposition) para realizar essa predição. Uma versão dessa ideia é implementada nesse projeto.
+
+### Qual a idéia por trás do algoritmo?
+O pressuposto por trás da idéia implementada é a de que, cada usuário, pode ser entendentido como uma combinação de perfis "gerais". Por exemplo, um usuário pode ser entendido como uma combinação de perfis de "usuários que gostam de filmes de ação", "usuários que gostam de filmes de comédia" e "usuários que gostam de filmes de terror", com pesos diferentes. Então uma pessoa que gosta bastante de filme de comédia e ação, porém odeia filmes de terror, teria um valor alto multiplicando o "vetor_perfil comédia" e alto para "vetor_perfil ação", mas baixo para "vetor_perfil terror".
+
+
+### O que é SVD?  
+SVD é uma técnica de decomposição de matrizes em matrizes que representam os autovalores e autovetores da matriz original. Para realizar o SVD deve-se determinar os autovalores e autovetores da matriz $ AA^T $. 
+A decomposição SVD é dada por:
+$$ A = U \Sigma V^T $$
+Em que $U$ é uma matriz com os autovetores da matriz $AA^T$, $V$ é uma matriz com os autovetores da matriz $A^TA$ e $\Sigma$ é uma matriz diagonal com a raiz dos autovalores de $AA^T$. Ou seja, temos a matriz com a raiz dos autovalores e duas matrizes com autovetores, uma dos vetores coluna de $A$ e outra dos vetores linha.
+
+### Qual a vantagem de usar SVD?
+A vantagem de usar SVD é que, ao decompor a matriz $AA^T$ em matrizes com autovetores e autovalores, é possível retirar a influência de "perfis" menos expressivos, que, em vias gerais, podem ser consideradas ruído. Isso é feito selecionando apenas os $k$ maiores autovalores e seus respectivos autovetores. Com isso somente os k perfis mais expressivos serão considerados e eles determinarão as notas que o usuário daria para os filmes que ele ainda não avaliou.
+
+### Como funciona o algotimo?
+O algoritmo de teste funciona da seguinte forma:
+1. Carrega os dados de filmes e avaliações
+2. Substitui a nota de um usuário por uma nota aleatória
+3. Cria uma matriz de avaliações de usuários por filmes
+4. Calcula a decomposição SVD da matriz de avaliações
+5. Retira os últimos $k$ autovalores e seus respectivos autovetores (o valor de k é definido a partir de um estudo do gráfico dos autovalores)
+6. Reconstrói a matriz de avaliações com os autovalores e autovetores selecionados
+7. Realiza a comparação da nota original com a nota predita
+
+O algoritmo real é semelhante, com a diferença de que ele não realiza a substituição da nota por uma nota aleatória, mas sim, realiza a predição de notas para espaços vazios no dataframe (valores NAN após o pivot_table), utilizando um valor padrão ou aleatório para representar essa nota a ser predita.
+
+
+### Como instalar?  
+Para garantir o funcionamento da aplicação é recomedado a criação de um ambiente virtual (venv) para instalar as dependência, como apresentado em https://docs.python.org/3/library/venv.html.  
+...
+
+Protinho agora é só rodar o arquivo, através do comando python/python3 main.py ou sua IDE python de preferência.
