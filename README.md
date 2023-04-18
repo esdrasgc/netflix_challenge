@@ -37,6 +37,7 @@ O algoritmo real é semelhante, com a diferença de que ele não realiza a subst
 
 ### Como instalar?  
 Para garantir o funcionamento da aplicação é recomedado a criação de um ambiente virtual (venv) para instalar as dependência, como apresentado em https://docs.python.org/3/library/venv.html.  
-...
+Em seguida, deve-se ativar o ambiente virtual e instalar as dependências através do comando:  
+```pip install -r requirements.txt```
 
-Protinho agora é só rodar o arquivo, através do comando python/python3 main.py ou sua IDE python de preferência.
+Protinho agora é só rodar o arquivo em sua IDE ou Jupyter notebook.
