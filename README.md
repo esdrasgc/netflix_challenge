@@ -14,6 +14,7 @@ O pressuposto por trás da idéia implementada é a de que, cada usuário, pode 
 ### O que é SVD?  
 SVD é uma técnica de decomposição de matrizes em matrizes que representam os autovalores e autovetores da matriz original. Para realizar o SVD deve-se determinar os autovalores e autovetores da matriz $AA^T$. 
 A decomposição SVD é dada por:  
+
 $$ A = U \Sigma V^T $$  
 
 Em que $U$ é uma matriz com os autovetores da matriz $AA^T$, $V$ é uma matriz com os autovetores da matriz $A^TA$ e $\Sigma$ é uma matriz diagonal com a raiz dos autovalores de $AA^T$. Ou seja, temos a matriz com a raiz dos autovalores e duas matrizes com autovetores, uma dos vetores coluna de $A$ e outra dos vetores linha.
