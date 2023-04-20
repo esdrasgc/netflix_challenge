@@ -74,7 +74,8 @@ Para garantir o funcionamento da aplicação é recomedado a criação de um amb
 Em seguida, deve-se ativar o ambiente virtual e instalar as dependências através do comando:  
 ```pip install -r requirements.txt```
 
-Para visualizar os graficos, rode o arquivo demo.py na sua IDE.
+Para visualizar os graficos, rode o arquivo demo.py na sua IDE, ou através do comando (no diretório raiz do repositorio):  
+```python demo.py```	
 
 Na main.ipynb é possivel ver a construção do algoritmo e a análise dos dados.
 
