@@ -13,7 +13,7 @@ df = df.drop('timestamp', axis=1)
 matrix = pd.pivot_table(df, values='rating', index='userId', columns='movieId')
 
 
-for iteração in range(2):
+for iteração in range(1000):
     b = matrix.copy()
     cont = 0
     indices = set()
