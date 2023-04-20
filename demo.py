@@ -81,7 +81,7 @@ plt.xticks(bar_positions + bar_width * 1.5, bin_labels, rotation=45)
 plt.xlabel('Diferenças')
 plt.ylabel('Frequência')
 plt.legend()
-plt.title('Histogramas das Diferenças dos Algoritmos (Nota obtida - Nota original)')
+plt.title('Histogramas das Diferenças dos Algoritmos (Nota original - Nota Predita)')
 plt.show()
 
 

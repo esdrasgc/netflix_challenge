@@ -57,7 +57,7 @@ Como pode ser observado, são realizados 4 ensaios, com $n$ igual a 100, 200, 50
 
 ### Resultados e Discussão
 A partir da análise dos dados levantados, pode-se perceber que o algoritmo é razoalvemente eficaz para realizar a recomendação de filmes para multiplos usuários, sem grande perda na eficácia. Essa característica é relavante para sistemas em produção, tendo em vista a grande demanda para realizar recomendação de filmes para multiplos usuários. 
-Dito isso, cabem algumas ressalvas. O algoritmo claramente superestima a nota que o usuário daria, então uma série de casos de recomendação que seriam considerados como obras medianas pelos usuários é esperado. Por outro lado, também significa que filmes que seriam considerados muito bons pelos usuários, raramente não são apresentados. Sendo assim, o resultado geral é positivo, mas certamente pode ser refinado, para concentrar os valores no centro da distribuição.
+Dito isso, cabem algumas ressalvas. O algoritmo claramente subestima a nota que o usuário daria, então uma série de casos de recomendação que seriam considerados como obras medianas pelos usuários é esperado. Por outro lado, também significa que filmes que seriam considerados muito bons pelos usuários, raramente não são apresentados. Sendo assim, o resultado geral é positivo, mas certamente pode ser refinado, para concentrar os valores no centro da distribuição.
 
 ### Como instalar?  
 Para garantir o funcionamento da aplicação é recomedado a criação de um ambiente virtual (venv) para instalar as dependência, como apresentado em https://docs.python.org/3/library/venv.html.  
