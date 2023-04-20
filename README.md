@@ -22,7 +22,7 @@ Em que $U$ é uma matriz com os autovetores da matriz $AA^T$, $V$ é uma matriz 
 ### Qual a vantagem de usar SVD?
 A vantagem de usar SVD é que, ao decompor a matriz $AA^T$ em matrizes com autovetores e autovalores, é possível retirar a influência de "perfis" menos expressivos, que, em vias gerais, podem ser consideradas ruído. Isso é feito selecionando apenas os $k$ maiores autovalores e seus respectivos autovetores. Com isso somente os k perfis mais expressivos serão considerados e eles determinarão as notas que o usuário daria para os filmes que ele ainda não avaliou.
 
-### Como funciona o algotimo?
+### Como funciona o algoritmo?
 O algoritmo de teste funciona da seguinte forma:
 1. Carrega os dados de filmes e avaliações
 2. Cria uma matriz de avaliações de usuários por filmes
@@ -33,6 +33,16 @@ O algoritmo de teste funciona da seguinte forma:
 7. Realiza a comparação da nota original com a nota predita
 
 O algoritmo real é semelhante, com a diferença de que ele não realiza a substituição da nota por uma nota aleatória, mas sim, realiza a predição de notas para espaços vazios no dataframe (valores NAN após o pivot_table), utilizando um valor padrão ou aleatório para representar essa nota a ser predita.
+
+### O que foi implementado?
+Foi implementado o algoritmo citado e realizado 1724 experimentos, escolhendo um valor aleátorio a cada iteração, realizada a inserção de ruído, calculado o svd, a retirada de k valores e a reconstrução. O valor absoluto da diferença entre o esperado e o predito estão no "diferenças.txt".
+O arquivo de escrita é o escrever_txt.py.  
+Porém, para chegar nesse código foram realizadas análises explorátorias no main.ipynb, nele estão presentes as etapas realizadas que serão apresentadas abaixo:
+1. criação do dataframe a partir da leitura dos dados
+2. criação 
+
+### Teste de estresse
+No código foi realizado um teste de estresse
 
 
 ### Como instalar?  
