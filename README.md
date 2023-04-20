@@ -25,8 +25,8 @@ A vantagem de usar SVD é que, ao decompor a matriz $AA^T$ em matrizes com autov
 ### Como funciona o algotimo?
 O algoritmo de teste funciona da seguinte forma:
 1. Carrega os dados de filmes e avaliações
-2. Substitui a nota de um usuário por uma nota aleatória
-3. Cria uma matriz de avaliações de usuários por filmes
+2. Cria uma matriz de avaliações de usuários por filmes
+3. Substitui a nota de um usuário por uma nota aleatória
 4. Calcula a decomposição SVD da matriz de avaliações
 5. Retira os últimos $k$ autovalores e seus respectivos autovetores (o valor de k é definido a partir de um estudo do gráfico dos autovalores)
 6. Reconstrói a matriz de avaliações com os autovalores e autovetores selecionados
