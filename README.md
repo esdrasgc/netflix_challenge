@@ -42,13 +42,13 @@ Porém, para chegar nesse código foram realizadas análises explorátorias no m
 2. Criação da tabela com usuário nas linhas, filmes na coluna e nota nas células.
 3. Realiza a cópia da matriz e escolhe um valor (que não seja NaN) e substitui por um valor aleátorio entre 0,5 e 5,0.
 4. Preenche as celulas com NaN com 2,75 (o meio do intervalo de notas possíveis).
-5. Para a escolha do K, foi realizado um estudo dos autovalores. O gráfico dos autovalores é apresentado abaixo:
+5. Para a escolha do K, foi realizado um estudo dos autovalores. O gráfico dos autovalores é apresentado abaixo:  
 
-![sigma_svd](SigmaSVDOutlier.png)
+![sigma_svd](SigmaSVDOutlier.png)  
 
 Porém, com o primeiro autovalor sendo um Outilier, o removemos e o gráfico ficou assim:
 
-![sigma_svd_sem_outlier](SigmaSVD.png)
+![sigma_svd_sem_outlier](SigmaSVD.png)  
 Dessa forma, atribuimos o valor 20 para k, pois é o valor que, por meio de varios testes, apresentou o melhor resultado e ser onde o gráfico começa a se estabilizar.
 
 6. Em seguida é realizado o procedimento explicado na seção anterior.
