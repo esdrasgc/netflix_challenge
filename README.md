@@ -38,8 +38,15 @@ O algoritmo real é semelhante, com a diferença de que ele não realiza a subst
 Foi implementado o algoritmo citado e realizado 1724 experimentos, escolhendo um valor aleátorio a cada iteração, realizada a inserção de ruído, calculado o svd, a retirada de k valores e a reconstrução. O valor absoluto da diferença entre o esperado e o predito estão no "diferenças.txt".
 O arquivo de escrita é o escrever_txt.py.  
 Porém, para chegar nesse código foram realizadas análises explorátorias no main.ipynb, nele estão presentes as etapas realizadas que serão apresentadas abaixo:
-1. criação do dataframe a partir da leitura dos dados
-2. criação 
+1. Criação do dataframe a partir da leitura dos dados.
+2. Criação da tabela com usuário nas linhas, filmes na coluna e nota nas células.
+3. Realiza a cópia da matriz e escolhe um valor (que não seja NaN) e substitui por um valor aleátorio entre 0,5 e 5,0.
+4. Preenche as celulas com NaN com 2,75 (o meio do intervalo de notas possíveis).
+5. Em seguida é realizado o procedimento explicado na seção anterior.
+
+O histograma construido é apresentado abaixo:
+![histograma_um_valor](hist_distribuicao_com_um_so_valor_alterado.png)
+
 
 ### Teste de estresse
 No código foi realizado um teste de estresse
