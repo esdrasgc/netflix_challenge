@@ -13,6 +13,7 @@ bin_edges = [-4.5,-3.9,-3.3,-2.7,-2.1 ,-1.5 ,-0.9, -0.3, 0.3, 0.9, 1.5, 2.1, 2.7
 
 # Função para criar o histograma
 def create_histogram(values, bin_edges):
+    plt.figure(figsize=(15, 6))
     n, bins, patches = plt.hist(values, bins=bin_edges, color='skyblue', edgecolor='black', linewidth=1.2)
     
     # Adiciona rótulos personalizados ao eixo x
@@ -65,7 +66,7 @@ colors = ['red', 'blue', 'green', 'orange', 'black']
 hist_data = [np.histogram(d, bins=bin_edges)[0] for d in data]
 
 # Plotar os histogramas
-plt.figure(figsize=(12, 6))
+plt.figure(figsize=(14, 6))
 bar_width = 0.17
 bar_positions = np.arange(len(bin_edges) - 1)
 
