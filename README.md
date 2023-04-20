@@ -49,8 +49,11 @@ O histograma construido é apresentado abaixo:
 
 
 ### Teste de estresse
-No código foi realizado um teste de estresse
+No código foi realizado um teste de estresse. Ele consiste em averiguar a eficácia do algoritmo com o aumento de valores "sujos" (aleatórios) na matriz. Para isso, foi realizado um loop que aumenta o número de valores aleatórios na matriz, até chegar a uma certa quantidade $n$ de valores ruidosos. Em seguida, ele realiza o procedimento descrito na seção anterior. Isso foi realizado 700 vezes para cada $n$. O resultado é apresentado abaixo (o gráfico é salvo no arquivo "distribuicao_teste_de_estresse.png")
 
+![histograma_teste_estresse](distribuicao_teste_de_estresse.png)
+
+Como pode ser observado, são realizados 4 ensaios, com $n$ igual a 100, 200, 500 e 1000. Além disso, foram selecionados 700 valores do caso com somente um valor ruidoso, para realizar uma comparação. A partir da análise, é possível perceber que, mesmo com um aumento, a eficácia do algoritmo se mantêm próxima do caso base (apenas um valor ruidoso). 
 
 ### Como instalar?  
 Para garantir o funcionamento da aplicação é recomedado a criação de um ambiente virtual (venv) para instalar as dependência, como apresentado em https://docs.python.org/3/library/venv.html.  
